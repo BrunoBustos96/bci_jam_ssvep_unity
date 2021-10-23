@@ -54,7 +54,7 @@ public class dropdownComPorts : MonoBehaviour
     void DropdownItemSelected(TMP_Dropdown dropdown)
         {
             int index = dropdown.value;
-
+            dropdown.itemText.text =  dropdown.options[index].text;
             staticPorts.selected_port = dropdown.options[index].text; //get port on button
             print("Selected Port:"+staticPorts.selected_port);
             // textBox.text = dropdown.options[index].text;

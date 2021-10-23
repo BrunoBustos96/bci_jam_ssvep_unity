@@ -7555,3 +7555,43 @@
 [2021-10-23 17:45:47.940] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
 [2021-10-23 17:45:52.257] [board_logger] [trace] release session
 [2021-10-23 17:45:52.257] [board_logger] [trace] stop stream
+[2021-10-23 18:25:33.585] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2021-10-23 18:25:33.585] [board_logger] [trace] Board object created -1
+[2021-10-23 18:25:33.585] [board_logger] [trace] prepare session
+[2021-10-23 18:25:33.601] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
+[2021-10-23 18:25:35.529] [board_logger] [trace] release session
+[2021-10-23 18:25:35.529] [board_logger] [trace] stop stream
+[2021-10-23 19:03:43.608] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2021-10-23 19:03:43.608] [board_logger] [trace] Board object created 0
+[2021-10-23 19:03:43.608] [board_logger] [info] openning port \\.\COM5
+[2021-10-23 19:03:43.626] [board_logger] [trace] port \\.\COM5 is open
+[2021-10-23 19:03:43.627] [board_logger] [trace] set port settings
+[2021-10-23 19:03:43.627] [board_logger] [debug] sending v to the board
+[2021-10-23 19:03:44.657] [board_logger] [debug] sending d to the board
+[2021-10-23 19:03:45.867] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
+[2021-10-23 19:03:45.867] [board_logger] [debug] sending b to the board
+[2021-10-23 19:03:54.630] [board_logger] [debug] sending s to the board
+[2021-10-23 19:04:05.028] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2021-10-23 19:04:05.028] [board_logger] [debug] use dyn lib: D:\Unity\Projects\bci_jam_ssvep_unity\GanglionLib.dll
+[2021-10-23 19:04:05.028] [board_logger] [trace] Board object created 1
+[2021-10-23 19:04:05.131] [board_logger] [debug] Library is loaded
+[2021-10-23 19:04:05.131] [board_logger] [info] use 15 as a timeout for device discovery and for callbacks
+[2021-10-23 19:04:05.131] [board_logger] [debug] ganglionlib initialized
+[2021-10-23 19:04:05.131] [board_logger] [info] mac address is not specified, try to find ganglion without it
+[2021-10-23 19:04:20.793] [board_logger] [error] failed to Open Ganglion Device 15
+[2021-10-23 19:04:28.834] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
+[2021-10-23 19:04:28.834] [board_logger] [trace] Board object created 0
+[2021-10-23 19:04:28.834] [board_logger] [info] openning port \\.\COM5
+[2021-10-23 19:04:28.852] [board_logger] [trace] port \\.\COM5 is open
+[2021-10-23 19:04:28.852] [board_logger] [trace] set port settings
+[2021-10-23 19:04:28.852] [board_logger] [debug] sending v to the board
+[2021-10-23 19:04:29.922] [board_logger] [debug] sending d to the board
+[2021-10-23 19:04:31.118] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
+[2021-10-23 19:04:31.118] [board_logger] [debug] sending b to the board
+[2021-10-23 19:04:36.487] [board_logger] [debug] sending s to the board
+[2021-10-23 19:04:39.882] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2021-10-23 19:04:39.882] [board_logger] [trace] Board object created -1
+[2021-10-23 19:04:39.882] [board_logger] [trace] prepare session
+[2021-10-23 19:04:39.882] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
+[2021-10-23 19:04:41.331] [board_logger] [trace] release session
+[2021-10-23 19:04:41.331] [board_logger] [trace] stop stream
