@@ -10,20 +10,14 @@ private Vector2 bulletPosition;
 public float offsetBullet;
 public GameObject bulletPrefab;
 public GameObject explosion;
-
 private int health = 2;
-
-// public GameObject forceField;
-
-
-
 public static bool playerIsAlive = true;
 
 public bool shooting;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerIsAlive = true;
     }
 
     // Update is called once per frame
@@ -31,7 +25,6 @@ public bool shooting;
     {
         horizontal = InputManager.Horizontal;
         shooting = InputManager.Fire;
-        // print(horizontal);
         Rotate();
         Shoot();
     }
@@ -40,7 +33,6 @@ public bool shooting;
     public void Rotate()
     {
         transform.Rotate(0, 0, -angularSpeed * horizontal * Time.deltaTime);
-
     }
 
     private void Shoot()
@@ -64,30 +56,18 @@ public bool shooting;
 
             health--;
 
-             if (health < 0)
+             if (health == 0)
             {
-                  
                     Kill(); //Destroy Ship
-
-             
             }
             else{
-
-
-
                 msg = "Force Field Damaged!";
                 print(msg);
                 // Destroy(forceField.gameObject);
                 Destroy(other.gameObject);
-
-
             }
-
-          
             }
     }
-
-
         public void Kill(){
             Destroy(gameObject);
             Instantiate(explosion, transform.position, transform.rotation);

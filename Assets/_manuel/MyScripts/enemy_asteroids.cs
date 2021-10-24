@@ -40,13 +40,18 @@ public class enemy_asteroids : MonoBehaviour
      private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet"))
         {
-            Destroy(gameObject);
-            Destroy(other.gameObject);
-            Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(explosion, 5);
+           Kill(other); //Destroy enemy and bullet, instantiate explosion
         }
     
         
+    }
+
+    public void Kill(Collider2D other){
+        Destroy(gameObject);
+        gameController.enemiesLvl_1 --;
+        Destroy(other.gameObject);
+        Instantiate(explosion, transform.position, transform.rotation);
+        Destroy(explosion, 5);
     }
 
  
