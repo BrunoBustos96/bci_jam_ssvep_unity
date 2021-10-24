@@ -41,25 +41,27 @@ using brainflow.math;
                 print((unprocessed_data.GetRow (eeg_channels[0]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0));
             }
             */
-            if (unprocessed_data.GetLength(1) % (staticPorts.sampling_rate*3) == 0){
-                print("Entering the segmentation loop");
-                print((unprocessed_data.GetRow (eeg_channels[0]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0));
-            }
-
-            
             double[] filtered;
-            for (int i = 0; i < eeg_channels.Length; i++){
+            if (unprocessed_data.GetLength(1) % (staticPorts.sampling_rate*3) == 0){
+                //print("Entering the segmentation loop");
+                //print((unprocessed_data.GetRow (eeg_channels[0]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0));
+                for (int i = 0; i < eeg_channels.Length; i++){
                 
-                filtered = DataFilter.perform_bandpass (unprocessed_data.GetRow (eeg_channels[i]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0);
+                    filtered = DataFilter.perform_bandpass (unprocessed_data.GetRow (eeg_channels[i]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0);
 
-                print("Filtered channel " + eeg_channels[i]);
+                    print("Filtered channel " + eeg_channels[i]);
 
-                print(("[{0}]", string.Join (", ", filtered)));
-                print(("[{1}]",string.Join(", ",(unprocessed_data.GetRow (eeg_channels[i])))));
+                    print(("[{0}]", string.Join (", ", filtered)));
+                    print(("[{1}]",string.Join(", ",(unprocessed_data.GetRow (eeg_channels[i])))));
 
                 //Console.WriteLine ("Filtered channel " + eeg_channels[i]);
                 //Console.WriteLine ("[{0}]", string.Join (", ", filtered));
             }
+            }
+
+            
+            
+            
             /*
             for (int i = 0; i < eeg_channels.Length; i++)
             {
