@@ -12,4 +12,7 @@ public static class staticPorts
    public static bool connect = false;
    public static bool statusON = false;
    
+   public static int[] eeg_channels;
+
+   public static int sampling_rate = 0;
 }
