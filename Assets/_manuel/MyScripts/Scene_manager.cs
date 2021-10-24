@@ -8,4 +8,8 @@ public class Scene_manager : MonoBehaviour
    public void StartGame(){
        SceneManager.LoadScene("base_level_scene");
    }
+
+   public void QuitGame(){
+       Application.Quit();
+   }
 }
