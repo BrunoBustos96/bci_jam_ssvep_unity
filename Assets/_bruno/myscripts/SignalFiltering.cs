@@ -35,18 +35,30 @@ using brainflow.math;
             Debug.Log("Num elements SF unprocessed data: " + unprocessed_data.GetLength(1));
             int[] eeg_channels = staticPorts.eeg_channels;
             //board_shim.release_session ();
+            /*
+            if (unprocessed_data.GetLength(1) > (staticPorts.sampling_rate*3)){
+                print("Entering the segmentation loop");
+                print((unprocessed_data.GetRow (eeg_channels[0]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0));
+            }
+            */
+            if (unprocessed_data.GetLength(1) % (staticPorts.sampling_rate*3) == 0){
+                print("Entering the segmentation loop");
+                print((unprocessed_data.GetRow (eeg_channels[0]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0));
+            }
 
-            // for demo apply different filters to different channels
+            
             double[] filtered;
-            print("PreFor");
             for (int i = 0; i < eeg_channels.Length; i++){
-                print("FILTER");
+                
                 filtered = DataFilter.perform_bandpass (unprocessed_data.GetRow (eeg_channels[i]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0);
 
                 print("Filtered channel " + eeg_channels[i]);
 
-                Console.WriteLine ("Filtered channel " + eeg_channels[i]);
-                Console.WriteLine ("[{0}]", string.Join (", ", filtered));
+                print(("[{0}]", string.Join (", ", filtered)));
+                print(("[{1}]",string.Join(", ",(unprocessed_data.GetRow (eeg_channels[i])))));
+
+                //Console.WriteLine ("Filtered channel " + eeg_channels[i]);
+                //Console.WriteLine ("[{0}]", string.Join (", ", filtered));
             }
             /*
             for (int i = 0; i < eeg_channels.Length; i++)

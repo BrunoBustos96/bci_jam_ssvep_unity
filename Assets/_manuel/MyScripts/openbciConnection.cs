@@ -35,7 +35,7 @@ public class openbciConnection : MonoBehaviour
             board_shim.prepare_session();
             board_shim.start_stream(450000, "file://brainflow_data.csv:w");
             sampling_rate = BoardShim.get_sampling_rate(board_id);
-
+            print("Sampling rate:"+sampling_rate);
             staticPorts.sampling_rate = BoardShim.get_sampling_rate(board_id);
 
             Debug.Log("Brainflow streaming was started");
