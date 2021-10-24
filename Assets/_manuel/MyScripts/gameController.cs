@@ -8,12 +8,16 @@ public class gameController : MonoBehaviour
 {
     public TextMeshProUGUI text;
     public static int enemiesLvl_1;
-    public static int currentLvl;
+    public int currentLvl;
+    public int enemiesInLvl;
+
+    public static int currentLvlEnemies;
 
     // Start is called before the first frame update
     void Start()
     {
-        enemiesLvl_1 = 3;
+        // enemiesLvl_1 = 3;
+        currentLvlEnemies = enemiesInLvl;
        
     }
 
@@ -23,7 +27,7 @@ public class gameController : MonoBehaviour
         if(player_asteroids.playerIsAlive == false){
             StartCoroutine(GameOverCoroutine());
         }
-        if(enemiesLvl_1 == 0){
+        if(currentLvlEnemies == 0){
          StartCoroutine(GameWinCoroutine());
         }
         
@@ -39,12 +43,19 @@ public class gameController : MonoBehaviour
 
     IEnumerator GameWinCoroutine(){
 
-            text.text = "You Win!";
+            // text.text = "You Win!";
+            text.text = "Level Cleared!";
             text.gameObject.SetActive(true);
             yield return new WaitForSeconds(3f);
-            text.text = "Level Cleared!";
-            yield return new WaitForSeconds(3f);
-            SceneManager.LoadScene("menu_asteroids");
+            // yield return new WaitForSeconds(3f);
+            if(currentLvl == 3)
+            {
+                 SceneManager.LoadScene("menu_asteroids");
+            }
+            else{
+            string s = string.Format("level_0{0}", currentLvl+1);
+            SceneManager.LoadScene(s);
+            }
 
     }
 
