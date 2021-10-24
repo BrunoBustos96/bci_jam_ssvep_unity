@@ -69,7 +69,7 @@ export const settings = {
         // },
 
           {
-            source: 'number',
+            source: 'number:value',
             target: 'unity:UpdateSelection',
           },
 
