@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 
 
@@ -8,9 +9,22 @@ public class automatic_fire : MonoBehaviour
 {
     private GameObject player;
     [SerializeField] private float angularSpeed = 250;
+    public int enemyNumber;
 
     void Start(){
         player = GameObject.FindWithTag("Player");
+    }
+
+    private void Update() {
+    //     // if(Input.GetKeyUp(KeyCode.))
+    //     if (Event.current.isKey && Event.current.type == EventType.KeyDown)
+    // {
+    //     Debug.Log(Event.current.keyCode);
+    // }
+
+    var inputValue = Input.inputString;
+    print("Input "+inputValue);
+
     }
     private void OnMouseDown() {
         print("clicked!");

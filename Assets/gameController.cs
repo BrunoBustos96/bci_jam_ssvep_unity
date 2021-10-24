@@ -39,11 +39,11 @@ public class gameController : MonoBehaviour
 
     IEnumerator GameWinCoroutine(){
 
-            text.text = "You Win!";
+            // text.text = "You Win!";
+            text.text = "Level Cleared!";
             text.gameObject.SetActive(true);
             yield return new WaitForSeconds(3f);
-            text.text = "Level Cleared!";
-            yield return new WaitForSeconds(3f);
+            // yield return new WaitForSeconds(3f);
             SceneManager.LoadScene("menu_asteroids");
 
     }
