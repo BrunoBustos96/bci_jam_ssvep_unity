@@ -10,6 +10,7 @@ public class automatic_fire : MonoBehaviour
     private GameObject player;
     [SerializeField] private float angularSpeed = 250;
     public int enemyNumber;
+ 
 
     void Start(){
         player = GameObject.FindWithTag("Player");
@@ -24,11 +25,16 @@ public class automatic_fire : MonoBehaviour
 
     var inputValue = Input.inputString;
     print("Input "+inputValue);
+    if (inputValue == enemyNumber.ToString()){
+            faceEnemy();
+    }
 
     }
     private void OnMouseDown() {
         print("clicked!");
         faceEnemy();
+         player_asteroids.shooting = false;
+
     }
 
 
@@ -43,8 +49,11 @@ public class automatic_fire : MonoBehaviour
         // transform.position = Vector2.MoveTowards(transform.position, player.transform.position, angularSpeed * Time.deltaTime);
         player.transform.up = -1* (player.transform.position - transform.position);
         // player.transform.up = Vector2.MoveTowards(transform.position, player.transform.position, angularSpeed * Time.deltaTime);
+        player_asteroids.shooting = true;
     }
 
+
+ 
 
 }
 

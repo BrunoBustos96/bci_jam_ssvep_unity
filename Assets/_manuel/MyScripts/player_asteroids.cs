@@ -13,7 +13,7 @@ public GameObject explosion;
 private int health = 2;
 public static bool playerIsAlive = true;
 
-public bool shooting;
+public static bool shooting;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +24,12 @@ public bool shooting;
     void Update()
     {
         horizontal = InputManager.Horizontal;
-        shooting = InputManager.Fire;
+        // player_asteroids.shooting = InputManager.Fire;
         Rotate();
+        if(player_asteroids.shooting == true){
         Shoot();
+
+        }
     }
 
 
@@ -37,7 +40,7 @@ public bool shooting;
 
     private void Shoot()
     {
-        if(shooting){
+        if(player_asteroids.shooting){
             
             var pos = transform.up * offsetBullet + transform.position;
 
@@ -47,6 +50,7 @@ public bool shooting;
                 transform.rotation
             );
             Destroy(bullet, 5);
+            player_asteroids.shooting = false;
         }
     }
 
