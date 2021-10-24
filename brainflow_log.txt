@@ -7880,3 +7880,9 @@
 [2021-10-24 11:24:04.259] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
 [2021-10-24 11:24:08.330] [board_logger] [trace] release session
 [2021-10-24 11:24:08.330] [board_logger] [trace] stop stream
+[2021-10-24 11:36:33.547] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2021-10-24 11:36:33.547] [board_logger] [trace] Board object created -1
+[2021-10-24 11:36:33.547] [board_logger] [trace] prepare session
+[2021-10-24 11:36:33.553] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
+[2021-10-24 11:36:35.257] [board_logger] [trace] release session
+[2021-10-24 11:36:35.257] [board_logger] [trace] stop stream
