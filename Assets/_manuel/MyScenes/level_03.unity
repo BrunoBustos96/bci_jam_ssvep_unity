@@ -5385,7 +5385,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a454440c3012f42a0ce354faea4e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angularSpeed: 0.00001
   enemyNumber: 0
 --- !u!1 &385545767
 GameObject:
@@ -5689,7 +5688,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a454440c3012f42a0ce354faea4e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angularSpeed: 250
   enemyNumber: 3
 --- !u!114 &559229344
 MonoBehaviour:
@@ -6063,7 +6061,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a454440c3012f42a0ce354faea4e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angularSpeed: 250
   enemyNumber: 2
 --- !u!1 &957832600
 GameObject:
@@ -11240,7 +11237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a454440c3012f42a0ce354faea4e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angularSpeed: 250
   enemyNumber: 1
 --- !u!1 &1642017460
 GameObject:
@@ -11276,7 +11272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a454440c3012f42a0ce354faea4e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angularSpeed: 250
   enemyNumber: 4
 --- !u!114 &1642017462
 MonoBehaviour:
@@ -11290,7 +11285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4096222b730c8145aecacd83fd9b87a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cycleHz: 5
+  cycleHz: 25
   oddeven: 0
 --- !u!114 &1642017463
 MonoBehaviour:

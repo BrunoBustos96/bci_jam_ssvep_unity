@@ -462,7 +462,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a454440c3012f42a0ce354faea4e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angularSpeed: 0.00001
   enemyNumber: 0
 --- !u!1 &385545767
 GameObject:
@@ -704,7 +703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a454440c3012f42a0ce354faea4e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angularSpeed: 250
   enemyNumber: 3
 --- !u!114 &559229344
 MonoBehaviour:
@@ -1078,7 +1076,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a454440c3012f42a0ce354faea4e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angularSpeed: 250
   enemyNumber: 2
 --- !u!1 &957832600
 GameObject:
@@ -6382,17 +6379,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a454440c3012f42a0ce354faea4e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angularSpeed: 250
   enemyNumber: 1
 --- !u!1 &1605682362 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5528266118853269360, guid: 9a42fd81e7afa9045a96e3152d2c5cf3, type: 3}
-  m_PrefabInstance: {fileID: 5528266119450153930}
+  m_PrefabInstance: {fileID: 5234808354568648816}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &1605682363 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5528266118853269361, guid: 9a42fd81e7afa9045a96e3152d2c5cf3, type: 3}
-  m_PrefabInstance: {fileID: 5528266119450153930}
+  m_PrefabInstance: {fileID: 5234808354568648816}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2120946542
 GameObject:
@@ -6490,7 +6486,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
---- !u!1001 &5528266119450153930
+--- !u!1001 &5234808354568648816
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -6504,10 +6500,6 @@ PrefabInstance:
     - target: {fileID: 5528266118853269360, guid: 9a42fd81e7afa9045a96e3152d2c5cf3, type: 3}
       propertyPath: m_Name
       value: Panel
-      objectReference: {fileID: 0}
-    - target: {fileID: 5528266118853269360, guid: 9a42fd81e7afa9045a96e3152d2c5cf3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5528266118853269361, guid: 9a42fd81e7afa9045a96e3152d2c5cf3, type: 3}
       propertyPath: m_Pivot.x
