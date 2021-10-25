@@ -18,9 +18,10 @@ public class ShowValueScript : MonoBehaviour
     // Update is called once per frame
     public void textUpdate(float value)
     {
-        FlickerSprite.cycleHz = value;
+        staticPorts.ssvep_threshold = value;
         //valueText.text = Convert.ToString(value);
-        print(value);
-        valueText.text = Mathf.RoundToInt(value) + " Hz";
+        print(value.ToString("0.00"));
+        valueText.text = value.ToString("0.00");
+        
     }
 }

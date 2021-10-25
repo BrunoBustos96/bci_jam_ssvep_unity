@@ -57,7 +57,11 @@ The following packages were updated:
   com.unity.render-pipelines.universal from version 10.5.0 to 10.6.0
   com.unity.test-framework from version 1.1.27 to 1.1.29
 
+<<<<<<< Updated upstream
 === Sat Oct 23 00:44:23 2021
+=======
+=== Sat Oct 23 12:41:43 2021
+>>>>>>> Stashed changes
 
 Packages were changed.
 Update Mode: updateDependencies
