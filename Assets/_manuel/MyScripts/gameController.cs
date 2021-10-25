@@ -9,6 +9,7 @@ public class gameController : MonoBehaviour
     public TextMeshProUGUI text;
     public int currentLvl;
     public int enemiesInLvl;
+    public static bool multiplayerLvl;
 
     public static int currentLvlEnemies;
 
@@ -17,6 +18,10 @@ public class gameController : MonoBehaviour
     {
         // enemiesLvl_1 = 3;
         currentLvlEnemies = enemiesInLvl;
+        if(currentLvl == 4){
+            multiplayerLvl = true;
+            print("MUltiplayer Level");
+        }
        
     }
 
@@ -33,6 +38,14 @@ public class gameController : MonoBehaviour
     }
 
     IEnumerator GameOverCoroutine(){
+             if(gameController.multiplayerLvl == true){
+                 string s = player_asteroids.winMultiplayer;
+                 text.text = s;
+                text.gameObject.SetActive(true);
+                yield return new WaitForSeconds(3f);
+                SceneManager.LoadScene("menu_asteroids");
+             }
+
         text.text = "You Lose!";
         text.gameObject.SetActive(true);
         yield return new WaitForSeconds(3f);
@@ -47,11 +60,12 @@ public class gameController : MonoBehaviour
             text.gameObject.SetActive(true);
             yield return new WaitForSeconds(3f);
             // yield return new WaitForSeconds(3f);
-            if(currentLvl == 3)
+            if(currentLvl == 3 || currentLvl ==4)
             {
                  SceneManager.LoadScene("menu_asteroids");
             }
             else{
+            
             string s = string.Format("level_0{0}", currentLvl+1);
             SceneManager.LoadScene(s);
             }
