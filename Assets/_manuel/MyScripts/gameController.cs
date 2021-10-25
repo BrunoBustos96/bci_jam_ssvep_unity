@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class gameController : MonoBehaviour
 {
     public TextMeshProUGUI text;
-    public static int enemiesLvl_1;
     public int currentLvl;
     public int enemiesInLvl;
 

@@ -16,11 +16,7 @@ public class automatic_fire : MonoBehaviour
     }
 
     private void Update() {
-    //     // if(Input.GetKeyUp(KeyCode.))
-    //     if (Event.current.isKey && Event.current.type == EventType.KeyDown)
-    // {
-    //     Debug.Log(Event.current.keyCode);
-    // }
+
 
     var inputValue = Input.inputString;
     print("Input "+inputValue);
@@ -48,7 +44,7 @@ public class automatic_fire : MonoBehaviour
         // transform.position = Vector2.MoveTowards(transform.position, player.transform.position, angularSpeed * Time.deltaTime);
         player.transform.up = -1* (player.transform.position - transform.position);
         // player.transform.up = Vector2.MoveTowards(transform.position, player.transform.position, angularSpeed * Time.deltaTime);
-        player_asteroids.shooting = true;
+        player_asteroids.shooting = true; //Shoot
     }
 
 
