@@ -18,20 +18,23 @@ public class automatic_fire : MonoBehaviour
     private void Update() {
 
     var inputValue = Input.inputString;
-    if (Input.inputString == null){
+    
+    if (Input.inputString == ""){
+        print("SSVEP MODE");
         inputValue = SignalFiltering.enemySelected;
     }
     
     print("Input "+inputValue);
     if (inputValue == enemyNumber.ToString()){
-            faceEnemy();
+        faceEnemy();
+        //Input.inputString == null;
     }
 
     }
     private void OnMouseDown() {
         print("clicked!");
         faceEnemy();
-         player_asteroids.shooting = false;
+        player_asteroids.shooting = false;
 
     }
 
