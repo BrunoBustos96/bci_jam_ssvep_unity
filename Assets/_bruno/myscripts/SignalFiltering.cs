@@ -82,15 +82,20 @@ using brainflow.math;
                 }
 
                 if ((sum5/filtered5.Length) > staticPorts.ssvep_threshold){
+                    print(sum5/filtered5.Length);
+                    print("ENEMY 5");
                     enemySelected = Convert.ToString(1);
                 }
                 else if ((sum12/filtered12.Length) > staticPorts.ssvep_threshold){
+                    print("ENEMY 12");
                     enemySelected = Convert.ToString(2);
                 }
                 else if ((sum12/filtered19.Length) > staticPorts.ssvep_threshold){
+                    print("ENEMY 19");
                     enemySelected = Convert.ToString(3);
                 }
                 else if ((sum25/filtered25.Length) > staticPorts.ssvep_threshold){
+                    print("ENEMY 25");
                     enemySelected = Convert.ToString(4);
                 }else{
                     enemySelected = Convert.ToString(5);
