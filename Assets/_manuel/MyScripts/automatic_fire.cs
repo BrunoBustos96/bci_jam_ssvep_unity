@@ -17,9 +17,11 @@ public class automatic_fire : MonoBehaviour
 
     private void Update() {
 
-
-    //var inputValue = Input.inputString;
-    var inputValue = SignalFiltering.enemySelected;
+    var inputValue = Input.inputString;
+    if (Input.inputString == null){
+        inputValue = SignalFiltering.enemySelected;
+    }
+    
     print("Input "+inputValue);
     if (inputValue == enemyNumber.ToString()){
             faceEnemy();
