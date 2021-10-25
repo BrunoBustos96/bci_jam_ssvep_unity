@@ -27,7 +27,7 @@ using brainflow.math;
             //THIS FUNCTION WAS MAINLY TESTED WITH THE SYNTHETIC BOARD
             int board_id = staticPorts.boardIdSelected;
             //double[,] unprocessed_data = openbciConnection.data;
-            Debug.Log("Num elements SF unprocessed data: " + unprocessed_data.GetLength(1));
+//            Debug.Log("Num elements SF unprocessed data: " + unprocessed_data.GetLength(1));
             int[] eeg_channels = staticPorts.eeg_channels;
             
             
