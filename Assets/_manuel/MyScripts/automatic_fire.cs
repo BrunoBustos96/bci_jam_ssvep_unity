@@ -8,7 +8,6 @@ using UnityEngine.Events;
 public class automatic_fire : MonoBehaviour
 {
     private GameObject player;
-    [SerializeField] private float angularSpeed = 250;
     public int enemyNumber;
  
 
