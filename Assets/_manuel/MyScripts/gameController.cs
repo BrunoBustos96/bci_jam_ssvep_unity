@@ -18,7 +18,7 @@ public class gameController : MonoBehaviour
     {
         // enemiesLvl_1 = 3;
         currentLvlEnemies = enemiesInLvl;
-       
+        //staticPorts.current_level = enemiesInLvl;
     }
 
     // Update is called once per frame

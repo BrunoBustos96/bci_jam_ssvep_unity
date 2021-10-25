@@ -44,11 +44,15 @@ public class openbciConnection : MonoBehaviour
             disconnect_btn.SetActive(true);
 
             staticPorts.eeg_channels =  BoardShim.get_eeg_channels (board_id);
+
+
+            DontDestroyOnLoad(this.gameObject);
         }
         catch (BrainFlowException e)
         {
             Debug.Log(e);
         }
+
     }
 
     // Update is called once per frame

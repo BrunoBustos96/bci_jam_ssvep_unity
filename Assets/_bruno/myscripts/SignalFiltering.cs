@@ -11,9 +11,16 @@ using brainflow.math;
     public class SignalFiltering: MonoBehaviour
     {
         public static double[,] unprocessed_data;
-        public static double[] filtered;
+        public static double[,] empty_data;
+        public static double[] filtered5;
+        public static double[] filtered12;
+        public static double[] filtered19;
+        public static double[] filtered25;
+
+        public static String enemySelected;
         void Awake(){
             print("SignalFiltering Started");
+            DontDestroyOnLoad(this.gameObject);
         }
         void Update ()
         {
@@ -46,7 +53,14 @@ using brainflow.math;
                 //print("Entering the segmentation loop");
                 //print((unprocessed_data.GetRow (eeg_channels[0]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0));
                 for (int i = 0; i < eeg_channels.Length; i++){
-                
+
+                    filtered5 = DataFilter.perform_bandpass (unprocessed_data.GetRow (eeg_channels[i]), staticPorts.sampling_rate, 5.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0);
+                    filtered12 = DataFilter.perform_bandpass (unprocessed_data.GetRow (eeg_channels[i]), staticPorts.sampling_rate, 12.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0);
+                    filtered19 = DataFilter.perform_bandpass (unprocessed_data.GetRow (eeg_channels[i]), staticPorts.sampling_rate, 19.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0);
+                    filtered25 = DataFilter.perform_bandpass (unprocessed_data.GetRow (eeg_channels[i]), staticPorts.sampling_rate, 25.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0);
+
+
+                    /*
                     filtered = DataFilter.perform_bandpass (unprocessed_data.GetRow (eeg_channels[i]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0);
 
                     print("FILTERLENGTH"+filtered.Length);
@@ -54,17 +68,36 @@ using brainflow.math;
 
                     print(("[{0}]", string.Join (", ", filtered)));
                     print(("[{1}]",string.Join(", ",(unprocessed_data.GetRow (eeg_channels[i])))));
-
+                    */
                 //Console.WriteLine ("Filtered channel " + eeg_channels[i]);
                 //Console.WriteLine ("[{0}]", string.Join (", ", filtered));
                 }
 
-                double sum = 0;
-                for(int j = 0;j < filtered.Length;j++){
-                    sum = sum + filtered[j];
+                double sum5 = 0,sum12 = 0, sum19 = 0, sum25 = 0;
+                for(int j = 0;j < filtered5.Length;j++){
+                    sum5 = sum5 + filtered5[j];
+                    sum12 = sum12 + filtered12[j];
+                    sum19 = sum19 + filtered19[j];
+                    sum25 = sum25 + filtered25[j];
                 }
-                print("AVERAGE FILTERED "+sum /filtered.Length );
 
+                if ((sum5/filtered5.Length) > staticPorts.ssvep_threshold){
+                    enemySelected = Convert.ToString(1);
+                }
+                else if ((sum12/filtered12.Length) > staticPorts.ssvep_threshold){
+                    enemySelected = Convert.ToString(2);
+                }
+                else if ((sum12/filtered19.Length) > staticPorts.ssvep_threshold){
+                    enemySelected = Convert.ToString(3);
+                }
+                else if ((sum25/filtered25.Length) > staticPorts.ssvep_threshold){
+                    enemySelected = Convert.ToString(4);
+                }else{
+                    enemySelected = Convert.ToString(5);
+                }
+                //print("AVERAGE FILTERED "+sum /filtered.Length );
+
+                unprocessed_data = empty_data;
             }
             
             
