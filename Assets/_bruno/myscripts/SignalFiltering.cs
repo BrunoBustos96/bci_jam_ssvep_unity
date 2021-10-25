@@ -80,13 +80,14 @@ using brainflow.math;
                     sum19 = sum19 + filtered19[j];
                     sum25 = sum25 + filtered25[j];
                 }
-
+                print(sum5/filtered5.Length);
                 if ((sum5/filtered5.Length) > staticPorts.ssvep_threshold){
                     print(sum5/filtered5.Length);
                     print("ENEMY 5");
                     enemySelected = Convert.ToString(1);
                 }
                 else if ((sum12/filtered12.Length) > staticPorts.ssvep_threshold){
+                    print(sum12/filtered12.Length);
                     print("ENEMY 12");
                     enemySelected = Convert.ToString(2);
                 }
