@@ -14,6 +14,7 @@ public class openbciConnection : MonoBehaviour
     public GameObject connect_btn;
     public GameObject disconnect_btn;
 
+    //public static double[,] data;
     // Start is called before the first frame update
     void startBoard()
     {
@@ -34,15 +35,24 @@ public class openbciConnection : MonoBehaviour
             board_shim.prepare_session();
             board_shim.start_stream(450000, "file://brainflow_data.csv:w");
             sampling_rate = BoardShim.get_sampling_rate(board_id);
+            print("Sampling rate:"+sampling_rate);
+            staticPorts.sampling_rate = BoardShim.get_sampling_rate(board_id);
+
             Debug.Log("Brainflow streaming was started");
             staticPorts.statusON = true;
             connect_btn.SetActive(false);
             disconnect_btn.SetActive(true);
+
+            staticPorts.eeg_channels =  BoardShim.get_eeg_channels (board_id);
+
+
+            DontDestroyOnLoad(this.gameObject);
         }
         catch (BrainFlowException e)
         {
             Debug.Log(e);
         }
+
     }
 
     // Update is called once per frame
@@ -59,11 +69,21 @@ public class openbciConnection : MonoBehaviour
             {
                 return;
             }
-            int number_of_data_points = sampling_rate * 4;
-            double[,] data = board_shim.get_current_board_data(number_of_data_points);
-            // check https://brainflow.readthedocs.io/en/stable/index.html for api ref and more code samples
-            Debug.Log("Num elements: " + data.GetLength(1));
+            int number_of_data_points = sampling_rate * 120;
+            //print(number_of_data_points);
+            //double [,] data = board_shim.get_current_board_data(number_of_data_points);
 
+            SignalFiltering.unprocessed_data = board_shim.get_current_board_data(number_of_data_points);
+            //SignalFiltering.unprocessed_data = board_shim.get_board_data();
+            // check https://brainflow.readthedocs.io/en/stable/index.html for api ref and more code samples
+            //print(data[31,1]);
+            /*
+            Debug.Log("Num elements: " + data.GetLength(0));
+            for (int i=0;i<data.GetLength(0);i++){
+                print(i);
+                //dt.Add((int)data[1,i]);    
+            }
+            */
         }
 
 
