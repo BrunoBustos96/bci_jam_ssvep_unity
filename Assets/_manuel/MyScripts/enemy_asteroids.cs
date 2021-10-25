@@ -44,21 +44,23 @@ public class enemy_asteroids : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
             healt--;
-            Destroy(other.gameObject);
+            Destroy(other.gameObject); //destroy bullet
             if (healt==0){
-           Kill(other); //Destroy enemy and bullet, instantiate explosion
-
+            Kill(); //Destroy enemy and bullet, instantiate explosion
             }
+        }
+        if(other.CompareTag("Player"))
+        {
+             Kill();
         }
     
         
     }
 
-    public void Kill(Collider2D other){
+    public void Kill(){
         Destroy(gameObject);
         gameController.currentLvlEnemies --;
         print("Enemies Left "+ gameController.currentLvlEnemies);
-        Destroy(other.gameObject);
         Instantiate(explosion, transform.position, transform.rotation);
         Destroy(explosion, 5);
     }
