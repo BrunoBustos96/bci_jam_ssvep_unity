@@ -20,6 +20,7 @@ public class automatic_fire : MonoBehaviour
     var inputValue = Input.inputString;
     
     if (Input.inputString == ""){
+        //If input value is EMPTY, the game automatically tries to use the SSVEP signal to shoot
         print("SSVEP MODE");
         inputValue = SignalFiltering.enemySelected;
     }

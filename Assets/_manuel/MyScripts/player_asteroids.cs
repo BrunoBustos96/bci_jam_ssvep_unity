@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class player_asteroids : MonoBehaviour
 {
+public int player_num;
 public float angularSpeed;
 private float horizontal;
 private Vector2 bulletPosition;
@@ -12,6 +13,8 @@ public GameObject bulletPrefab;
 public GameObject explosion;
 private int health = 2;
 public static bool playerIsAlive = true;
+
+public static string winMultiplayer;
 
 public static bool shooting;
     // Start is called before the first frame update
@@ -28,14 +31,19 @@ public static bool shooting;
         Rotate();
         if(player_asteroids.shooting == true){
         Shoot();
-
         }
+        // if (transform.rotation.x != 0|| transform.rotation.y != 0){
+        //     print("Corrected!");
+        //             transform.rotation = Quaternion.Euler(0,0,transform.rotation.z);
+        // }
+
     }
 
 
     public void Rotate()
     {
         transform.Rotate(0, 0, -angularSpeed * horizontal * Time.deltaTime);
+
     }
 
     private void Shoot()
@@ -73,12 +81,23 @@ public static bool shooting;
             }
     }
         public void Kill(){
+            if(gameController.multiplayerLvl == true)
+            {
             Destroy(gameObject);
             Instantiate(explosion, transform.position, transform.rotation);
             Destroy(explosion, 5);
-            Destroy(gameObject);
+            winMultiplayer = string.Format("Player {0} Lose!", player_num);
             print("You are death!");
             playerIsAlive = false;
+            }
+            else{
+            Destroy(gameObject);
+            Instantiate(explosion, transform.position, transform.rotation);
+            Destroy(explosion, 5);
+            print("You are death!");
+            playerIsAlive = false;
+
+            }
         }
 
 }
