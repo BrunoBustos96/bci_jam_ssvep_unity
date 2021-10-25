@@ -15,4 +15,6 @@ public static class staticPorts
    public static int[] eeg_channels;
 
    public static int sampling_rate = 0;
+
+   public static float ssvep_threshold;
 }
