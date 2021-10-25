@@ -11,7 +11,7 @@ using brainflow.math;
     public class SignalFiltering: MonoBehaviour
     {
         public static double[,] unprocessed_data;
-
+        public static double[] filtered;
         void Awake(){
             print("SignalFiltering Started");
         }
@@ -41,7 +41,7 @@ using brainflow.math;
                 print((unprocessed_data.GetRow (eeg_channels[0]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0));
             }
             */
-            double[] filtered;
+            
             if (unprocessed_data.GetLength(1) % (staticPorts.sampling_rate*3) == 0){
                 //print("Entering the segmentation loop");
                 //print((unprocessed_data.GetRow (eeg_channels[0]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0));
@@ -49,6 +49,7 @@ using brainflow.math;
                 
                     filtered = DataFilter.perform_bandpass (unprocessed_data.GetRow (eeg_channels[i]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0);
 
+                    print("FILTERLENGTH"+filtered.Length);
                     print("Filtered channel " + eeg_channels[i]);
 
                     print(("[{0}]", string.Join (", ", filtered)));
@@ -56,9 +57,16 @@ using brainflow.math;
 
                 //Console.WriteLine ("Filtered channel " + eeg_channels[i]);
                 //Console.WriteLine ("[{0}]", string.Join (", ", filtered));
-            }
-            }
+                }
 
+                double sum = 0;
+                for(int j = 0;j < filtered.Length;j++){
+                    sum = sum + filtered[j];
+                }
+                print("AVERAGE FILTERED "+sum /filtered.Length );
+
+            }
+            
             
             
             
