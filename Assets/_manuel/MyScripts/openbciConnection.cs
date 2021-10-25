@@ -69,12 +69,12 @@ public class openbciConnection : MonoBehaviour
             {
                 return;
             }
-            int number_of_data_points = sampling_rate * 4;
+            int number_of_data_points = sampling_rate * 120;
             //print(number_of_data_points);
             //double [,] data = board_shim.get_current_board_data(number_of_data_points);
 
             SignalFiltering.unprocessed_data = board_shim.get_current_board_data(number_of_data_points);
-
+            //SignalFiltering.unprocessed_data = board_shim.get_board_data();
             // check https://brainflow.readthedocs.io/en/stable/index.html for api ref and more code samples
             //print(data[31,1]);
             /*
