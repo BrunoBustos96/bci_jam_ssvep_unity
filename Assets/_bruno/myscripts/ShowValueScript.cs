@@ -13,6 +13,7 @@ public class ShowValueScript : MonoBehaviour
     void Start()
     {
         valueText = GetComponent<TextMeshProUGUI> ();
+        print(valueText.text);
     }
 
     // Update is called once per frame
@@ -24,4 +25,10 @@ public class ShowValueScript : MonoBehaviour
         valueText.text = value.ToString("0.00");
         
     }
+
+    /*
+    public static void enemyTextUpdate(int value){
+        value.Text.text = value.ToString();
+    }
+    */
 }

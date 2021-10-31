@@ -18,4 +18,5 @@ public static class staticPorts
 
    public static float ssvep_threshold;
 
+   //public static int enemy_selected;
 }

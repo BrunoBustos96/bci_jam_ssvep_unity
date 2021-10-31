@@ -26,9 +26,9 @@ public static bool shooting;
     // Update is called once per frame
     void Update()
     {
-        horizontal = InputManager.Horizontal;
+        //horizontal = InputManager.Horizontal;
         // player_asteroids.shooting = InputManager.Fire;
-        Rotate();
+        //Rotate();
         if(player_asteroids.shooting == true){
         Shoot();
         }

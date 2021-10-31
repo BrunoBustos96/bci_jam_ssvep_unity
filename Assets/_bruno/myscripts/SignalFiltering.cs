@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 
 using brainflow;
 using brainflow.math;
@@ -18,10 +19,17 @@ using brainflow.math;
         public static double[] filtered25;
 
         public static String enemySelected;
+
+        //public GameObject textObject;
+
+        public TextMeshProUGUI enSel;
         void Awake(){
+
             print("SignalFiltering Started");
             DontDestroyOnLoad(this.gameObject);
+            //enSel = textObject.GetComponent<TextMeshProUGUI> ();
         }
+
         void Update ()
         {
             //THIS FUNCTION WAS MAINLY TESTED WITH THE SYNTHETIC BOARD
@@ -54,27 +62,34 @@ using brainflow.math;
                 }
                 print(sum5/filtered5.Length);
                 
+                //ShowValueScript.enemyTextUpdate(7);
+
                 //CHECKING IF THE AVERAGE FILTERED SIGNAL SURPASSES THE THRESHOLD
                 if ((sum25/filtered25.Length) > staticPorts.ssvep_threshold){
                     print("ENEMY 25");
                     enemySelected = Convert.ToString(4);
+                    enSel.text = Convert.ToString(4);
                 }
                 else if ((sum12/filtered19.Length) > staticPorts.ssvep_threshold){
                     print("ENEMY 19");
                     enemySelected = Convert.ToString(3);
+                    enSel.text  = Convert.ToString(3);
                 }
                 else if ((sum12/filtered12.Length) > staticPorts.ssvep_threshold){
                     print(sum12/filtered12.Length);
                     print("ENEMY 12");
                     enemySelected = Convert.ToString(2);
+                    enSel.text  = Convert.ToString(2);
                 }
                 else if ((sum5/filtered5.Length) > staticPorts.ssvep_threshold){
                     print(sum5/filtered5.Length);
                     print("ENEMY 5");
                     enemySelected = Convert.ToString(1);
+                    enSel.text  = Convert.ToString(1);
                 }
                 else{
-                    enemySelected = Convert.ToString(5);
+                    enemySelected = Convert.ToString(-1);
+                    enSel.text  = Convert.ToString(-1);
                 }
                 //print("AVERAGE FILTERED "+sum /filtered.Length );
 

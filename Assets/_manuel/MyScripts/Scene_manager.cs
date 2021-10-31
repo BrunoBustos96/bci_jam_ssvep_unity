@@ -8,7 +8,9 @@ public class Scene_manager : MonoBehaviour
    public void StartGame(){
        SceneManager.LoadScene("base_level_scene");
    }
-
+    public void DebugScene(){
+       SceneManager.LoadScene("SSVEPDebugTool");
+   }
  public void MultiplayerGame(){
        SceneManager.LoadScene("multiplayer_level");
    }
