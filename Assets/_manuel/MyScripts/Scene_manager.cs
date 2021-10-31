@@ -9,6 +9,9 @@ public class Scene_manager : MonoBehaviour
        SceneManager.LoadScene("base_level_scene");
    }
 
+ public void MultiplayerGame(){
+       SceneManager.LoadScene("multiplayer_level");
+   }
    public void QuitGame(){
        Application.Quit();
    }

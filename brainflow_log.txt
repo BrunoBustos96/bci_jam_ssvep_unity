@@ -7827,8 +7827,6 @@
 [2021-10-25 01:30:09.908] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
 [2021-10-25 01:30:24.456] [board_logger] [trace] release session
 [2021-10-25 01:30:24.456] [board_logger] [trace] stop stream
-<<<<<<< Updated upstream
-=======
 [2021-10-25 01:38:44.762] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"COM5","timeout":0}
 [2021-10-25 01:38:44.762] [board_logger] [trace] Board object created 0
 [2021-10-25 01:38:44.762] [board_logger] [info] openning port \\.\COM5
@@ -7844,16 +7842,3 @@
 [2021-10-25 01:38:46.881] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
 [2021-10-25 01:39:03.616] [board_logger] [trace] release session
 [2021-10-25 01:39:03.616] [board_logger] [trace] stop stream
-[2021-10-25 02:30:45.798] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
-[2021-10-25 02:30:45.798] [board_logger] [trace] Board object created -1
-[2021-10-25 02:30:45.798] [board_logger] [trace] prepare session
-[2021-10-25 02:30:45.804] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
-[2021-10-25 02:30:48.504] [board_logger] [trace] release session
-[2021-10-25 02:30:48.504] [board_logger] [trace] stop stream
-[2021-10-28 11:31:40.364] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
-[2021-10-28 11:31:40.375] [board_logger] [trace] Board object created -1
-[2021-10-28 11:31:40.375] [board_logger] [trace] prepare session
-[2021-10-28 11:31:40.381] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
-[2021-10-28 11:31:57.128] [board_logger] [trace] release session
-[2021-10-28 11:31:57.128] [board_logger] [trace] stop stream
->>>>>>> Stashed changes
