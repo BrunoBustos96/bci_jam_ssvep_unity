@@ -18,7 +18,7 @@ public static string winMultiplayer;
 
 public static bool shooting;
 
-public float timeRemaining = 1;
+public float timeRemaining = 2.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +34,7 @@ public float timeRemaining = 1;
         if(timeRemaining>0){
             timeRemaining -= Time.deltaTime;
         }else{
-            timeRemaining = 1;
+            timeRemaining = 2.0f;
             if(player_asteroids.shooting == true){
             Shoot();
             }

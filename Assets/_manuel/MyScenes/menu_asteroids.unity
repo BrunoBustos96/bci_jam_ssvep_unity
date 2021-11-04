@@ -1336,22 +1336,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 448086498}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 108578181}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1036590577}
+        m_TargetAssemblyTypeName: Scene_manager, Assembly-CSharp
+        m_MethodName: ChangeMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2367,6 +2355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9da207b8ea7cc749beb273c84c43287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enSel: {fileID: 0}
 --- !u!1 &811338896
 GameObject:
   m_ObjectHideFlags: 0
@@ -2868,10 +2857,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 448086498}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1036590577}
+        m_TargetAssemblyTypeName: Scene_manager, Assembly-CSharp
+        m_MethodName: ChangeMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2879,18 +2868,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 108578181}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &864884628
 MonoBehaviour:
@@ -3077,7 +3054,7 @@ GameObject:
   - component: {fileID: 938133614}
   m_Layer: 5
   m_Name: _connect_btn
-  m_TagString: Untagged
+  m_TagString: connect_btn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3495,6 +3472,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3841e77ed04fe3545ae53b8f4f2ad234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenu: {fileID: 108578181}
+  boardMenu: {fileID: 448086498}
+  connectButton: {fileID: 938133612}
+  disconnectButton: {fileID: 1638122863}
 --- !u!4 &1036590578
 Transform:
   m_ObjectHideFlags: 0
@@ -5517,7 +5498,7 @@ GameObject:
   - component: {fileID: 1638122865}
   m_Layer: 5
   m_Name: _disconnect_btn
-  m_TagString: Untagged
+  m_TagString: disconnect_btn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

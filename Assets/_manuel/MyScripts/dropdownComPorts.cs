@@ -20,7 +20,8 @@ public class dropdownComPorts : MonoBehaviour
 
     public void OnClick()
     {
-            staticPorts.connect = true;
+        staticPorts.connect = true;
+        
     }
 
     void instantiateButton()

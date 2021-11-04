@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bullet
   - enemy
+  - connect_btn
+  - disconnect_btn
   layers:
   - Default
   - TransparentFX

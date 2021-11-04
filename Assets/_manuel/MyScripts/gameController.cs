@@ -31,8 +31,11 @@ public class gameController : MonoBehaviour
         if(player_asteroids.playerIsAlive == false){
             StartCoroutine(GameOverCoroutine());
         }
-        if(currentLvlEnemies == 0){
+        else if(currentLvlEnemies == 0){
          StartCoroutine(GameWinCoroutine());
+        }
+        else if (currentLvlEnemies == 0 && player_asteroids.playerIsAlive == false){
+            StartCoroutine(GameOverCoroutine());
         }
         
     }

@@ -12,6 +12,7 @@ public class openbciConnection : MonoBehaviour
     private int sampling_rate = 0;
 
     public GameObject connect_btn;
+    
     public GameObject disconnect_btn;
 
     //public static double[,] data;
@@ -45,8 +46,11 @@ public class openbciConnection : MonoBehaviour
 
             staticPorts.eeg_channels =  BoardShim.get_eeg_channels (board_id);
 
-
+            //DontDestroyOnLoad(connect_btn);
+            //DontDestroyOnLoad(disconnect_btn);
+            //SetConnectButton();
             DontDestroyOnLoad(this.gameObject);
+            
         }
         catch (BrainFlowException e)
         {
@@ -84,15 +88,39 @@ public class openbciConnection : MonoBehaviour
                 //dt.Add((int)data[1,i]);    
             }
             */
+            /*
+            if (connect_btn == null){
+                connect_btn = GameObject.FindWithTag("connect_btn");
+                connect_btn.SetActive(false);
+            }
+            if (disconnect_btn == null){
+                disconnect_btn = GameObject.FindWithTag("disconnect_btn");
+                disconnect_btn.SetActive(true);
+            }
+            */
+            
         }
-
-
+        /*
+        if (connect_btn == null){
+            connect_btn = GameObject.FindWithTag("connect_btn");
+        }
+        if (disconnect_btn == null){
+            disconnect_btn = GameObject.FindWithTag("disconnect_btn");
+        }
         
+        if(staticPorts.statusON){
+            connect_btn.SetActive(false);
+            disconnect_btn.SetActive(true);
+        }
+        */
     }
-
     // you need to call release_session and ensure that all resources correctly released
     public void OnDestroy()
     {
+        
+        print("DESTROYING BOARD");
+        
+
         if (board_shim != null)
         {
             try
@@ -103,10 +131,32 @@ public class openbciConnection : MonoBehaviour
             {
                 Debug.Log(e);
             }
+            //staticPorts.connect = false;
             staticPorts.statusON = false;
-            connect_btn.SetActive(true);
-            disconnect_btn.SetActive(false);
+            //connect_btn.SetActive(true);
+            //disconnect_btn.SetActive(false);
             Debug.Log("Brainflow streaming was stopped");
         }
     }
+    /*
+    public void ToggleConnect(){
+        if(PlayerPrefs.GetInt("Connected",0) == 0){
+            PlayerPrefs.SetInt("Connected",1);
+        }
+        else{
+            PlayerPrefs.SetInt("Connected", 0);
+        }
+        SetConnectButton();
+    }
+    private void SetConnectButton(){
+        if(PlayerPrefs.GetInt("Connected", 0) == 0){
+            connect_btn.SetActive(false);
+            disconnect_btn.SetActive(true);
+        }
+        else{
+            connect_btn.SetActive(true);
+            disconnect_btn.SetActive(false);
+        }
+    }
+    */
 }
