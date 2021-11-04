@@ -52,6 +52,8 @@ public class automatic_fire : MonoBehaviour
         player.transform.up = -1* (player.transform.position - transform.position);
         // player.transform.up = Vector2.MoveTowards(transform.position, player.transform.position, angularSpeed * Time.deltaTime);
         player_asteroids.shooting = true; //Shoot
+        //return;
+        //player_asteroids.shooting = false;
     }
 
 

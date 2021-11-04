@@ -39,7 +39,7 @@ using brainflow.math;
             int[] eeg_channels = staticPorts.eeg_channels;
             
             
-            if (unprocessed_data.GetLength(1) % (staticPorts.sampling_rate*3) == 0){
+            if (unprocessed_data.GetLength(1) % (staticPorts.sampling_rate*2) == 0){
                 //print("Entering the segmentation loop");
                 //print((unprocessed_data.GetRow (eeg_channels[0]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0));
                 print("ENTERED THE IF");

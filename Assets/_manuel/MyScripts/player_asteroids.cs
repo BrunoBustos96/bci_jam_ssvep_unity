@@ -17,6 +17,8 @@ public static bool playerIsAlive = true;
 public static string winMultiplayer;
 
 public static bool shooting;
+
+public float timeRemaining = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +31,13 @@ public static bool shooting;
         //horizontal = InputManager.Horizontal;
         // player_asteroids.shooting = InputManager.Fire;
         //Rotate();
-        if(player_asteroids.shooting == true){
-        Shoot();
+        if(timeRemaining>0){
+            timeRemaining -= Time.deltaTime;
+        }else{
+            timeRemaining = 1;
+            if(player_asteroids.shooting == true){
+            Shoot();
+            }
         }
         // if (transform.rotation.x != 0|| transform.rotation.y != 0){
         //     print("Corrected!");
@@ -59,6 +66,7 @@ public static bool shooting;
             );
             Destroy(bullet, 5);
             player_asteroids.shooting = false;
+            
         }
     }
 
