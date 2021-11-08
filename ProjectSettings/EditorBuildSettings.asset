@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/_manuel/MyScenes/multiplayer_level.unity
     guid: 0da3f7fd62f7a66469d98611775affa3
   - enabled: 1
-    path: Assets/_bruno/SSVEPDebugTool.unity
+    path: Assets/_bruno/myscenes/SSVEPDebugTool.unity
     guid: 0c7035ebc664a4b42be821c156f50894
   m_configObjects: {}

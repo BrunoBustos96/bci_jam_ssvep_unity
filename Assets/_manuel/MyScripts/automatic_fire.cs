@@ -17,19 +17,19 @@ public class automatic_fire : MonoBehaviour
 
     private void Update() {
 
-    var inputValue = Input.inputString;
-    
-    if (Input.inputString == ""){
-        //If input value is EMPTY, the game automatically tries to use the SSVEP signal to shoot
-        print("SSVEP MODE");
-        inputValue = SignalFiltering.enemySelected;
-    }
-    
-    print("Input "+inputValue);
-    if (inputValue == enemyNumber.ToString()){
-        faceEnemy();
-        //Input.inputString == null;
-    }
+        var inputValue = Input.inputString;
+        
+        if (Input.inputString == ""){
+            //If input value is EMPTY, the game automatically tries to use the SSVEP signal to shoot
+            print("SSVEP MODE");
+            inputValue = SignalFiltering.enemySelected;
+        }
+        
+        print("Input "+inputValue);
+        if (inputValue == enemyNumber.ToString()){
+            faceEnemy();
+            //Input.inputString == null;
+        }
 
     }
     private void OnMouseDown() {

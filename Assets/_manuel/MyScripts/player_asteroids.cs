@@ -36,7 +36,7 @@ public float timeRemaining = 2.0f;
         }else{
             timeRemaining = 2.0f;
             if(player_asteroids.shooting == true){
-            Shoot();
+                Shoot();
             }
         }
         // if (transform.rotation.x != 0|| transform.rotation.y != 0){
@@ -91,21 +91,35 @@ public float timeRemaining = 2.0f;
         public void Kill(){
             if(gameController.multiplayerLvl == true)
             {
-            Destroy(gameObject);
-            Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(explosion, 5);
-            winMultiplayer = string.Format("Player {0} Lose!", player_num);
-            print("You are death!");
-            playerIsAlive = false;
+                /*
+                staticPorts.scorePlyr1 = staticPorts.scorePlyr1+1;
+                staticPorts.scorePlyr2 = staticPorts.scorePlyr2+1;
+                */
+                Destroy(gameObject);
+                Instantiate(explosion, transform.position, transform.rotation);
+                Destroy(explosion, 5);
+
+                UpdateScore(player_num); // You pass the loser as an argument to update the score
+
+                winMultiplayer = string.Format("Player {0} Lose!", player_num);
+                print("You are dead!");
+                playerIsAlive = false;
             }
             else{
-            Destroy(gameObject);
-            Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(explosion, 5);
-            print("You are death!");
-            playerIsAlive = false;
+                Destroy(gameObject);
+                Instantiate(explosion, transform.position, transform.rotation);
+                Destroy(explosion, 5);
+                print("You are dead!");
+                playerIsAlive = false;
 
             }
         }
+        void UpdateScore(int playerNumber){
+            if(playerNumber==2){
+                staticPorts.scorePlyr1 = staticPorts.scorePlyr1 + 1;
+            }else if(playerNumber==1){
+                staticPorts.scorePlyr2 = staticPorts.scorePlyr2 + 1;
+            }
+    }
 
 }

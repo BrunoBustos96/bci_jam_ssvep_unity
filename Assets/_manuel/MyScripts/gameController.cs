@@ -42,8 +42,9 @@ public class gameController : MonoBehaviour
 
     IEnumerator GameOverCoroutine(){
              if(gameController.multiplayerLvl == true){
-                 string s = player_asteroids.winMultiplayer;
-                 text.text = s;
+                string s = player_asteroids.winMultiplayer;
+                text.text = s;
+
                 text.gameObject.SetActive(true);
                 yield return new WaitForSeconds(3f);
                 SceneManager.LoadScene("menu_asteroids");
@@ -75,7 +76,7 @@ public class gameController : MonoBehaviour
 
     }
 
-
+    
     //GameOver - You Lose Screen, wait for secs, show main menu
     //GameWin - You Win!, wait for secs, Level {} Cleared!, next level
 }
