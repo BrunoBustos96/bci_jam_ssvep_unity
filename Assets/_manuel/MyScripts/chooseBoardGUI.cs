@@ -19,6 +19,14 @@ public class chooseBoardGUI : MonoBehaviour
      public void syntheticOnClick()
     {
         staticPorts.boardIdSelected = (int)BoardIds.SYNTHETIC_BOARD;
+
         staticPorts.synthetic = true;
+    }
+
+     public void playbackOnClick()
+    {
+        //staticPorts.boardIdSelected = (int)BoardIds.PLAYBACK_FILE_BOARD;
+        staticPorts.boardIdSelected = (int)BoardIds.CYTON_BOARD;
+        staticPorts.playback = true;
     }
 }

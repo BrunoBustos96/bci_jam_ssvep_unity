@@ -8223,3 +8223,69 @@
 [2021-11-07 19:57:09.194] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
 [2021-11-07 19:58:22.582] [board_logger] [trace] release session
 [2021-11-07 19:58:22.582] [board_logger] [trace] stop stream
+[2021-11-14 11:32:53.770] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 11:32:53.770] [board_logger] [trace] Board object created -1
+[2021-11-14 11:32:53.770] [board_logger] [trace] prepare session
+[2021-11-14 11:32:53.776] [board_logger] [trace] File Streamer, file: cython_data.csv, mods: w
+[2021-11-14 11:33:39.237] [board_logger] [trace] release session
+[2021-11-14 11:33:39.237] [board_logger] [trace] stop stream
+[2021-11-14 11:36:55.957] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 11:36:55.957] [board_logger] [trace] Board object created -1
+[2021-11-14 11:36:55.957] [board_logger] [trace] prepare session
+[2021-11-14 11:36:55.963] [board_logger] [trace] File Streamer, file: cython_data.csv, mods: w
+[2021-11-14 11:37:13.152] [board_logger] [trace] release session
+[2021-11-14 11:37:13.152] [board_logger] [trace] stop stream
+[2021-11-14 12:03:38.906] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 12:03:38.906] [board_logger] [trace] Board object created -1
+[2021-11-14 12:03:38.906] [board_logger] [trace] prepare session
+[2021-11-14 12:03:38.913] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
+[2021-11-14 12:03:40.692] [board_logger] [trace] release session
+[2021-11-14 12:03:40.692] [board_logger] [trace] stop stream
+[2021-11-14 12:05:29.342] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 12:05:29.343] [board_logger] [trace] Board object created -1
+[2021-11-14 12:05:29.343] [board_logger] [trace] prepare session
+[2021-11-14 12:05:29.349] [board_logger] [trace] File Streamer, file: brainflow_data.csv, mods: w
+[2021-11-14 12:05:32.135] [board_logger] [trace] release session
+[2021-11-14 12:05:32.135] [board_logger] [trace] stop stream
+[2021-11-14 12:13:11.067] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"-3","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 12:13:11.067] [board_logger] [trace] Board object created -3
+[2021-11-14 12:13:11.067] [board_logger] [error] playback file or master board id not provided
+[2021-11-14 12:14:19.534] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"-3","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 12:14:19.534] [board_logger] [trace] Board object created -3
+[2021-11-14 12:14:19.534] [board_logger] [error] playback file or master board id not provided
+[2021-11-14 12:14:30.547] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"-3","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 12:14:30.547] [board_logger] [trace] Board object created -3
+[2021-11-14 12:14:30.547] [board_logger] [error] playback file or master board id not provided
+[2021-11-14 12:17:10.104] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"-3","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 12:17:10.104] [board_logger] [trace] Board object created -3
+[2021-11-14 12:17:10.104] [board_logger] [error] playback file or master board id not provided
+[2021-11-14 12:22:07.198] [board_logger] [info] incoming json: {"file":"file:\/\/Cython_data.csv","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"-3","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 12:22:07.198] [board_logger] [trace] Board object created -3
+[2021-11-14 12:22:07.198] [board_logger] [error] invalid file path
+[2021-11-14 12:48:29.963] [board_logger] [info] incoming json: {"file":"file:\/\/Cyton_data.txt","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 12:48:29.963] [board_logger] [trace] Board object created 0
+[2021-11-14 12:48:29.963] [board_logger] [error] serial port is empty
+[2021-11-14 12:50:28.842] [board_logger] [info] incoming json: {"file":"file:\/\/Cyton_data.txt","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"0","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 12:50:28.842] [board_logger] [trace] Board object created 0
+[2021-11-14 12:50:28.842] [board_logger] [error] serial port is empty
+[2021-11-14 12:50:59.467] [board_logger] [info] incoming json: {"file":"file:\/\/Cyton_data.csv","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"0","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 12:50:59.467] [board_logger] [trace] Board object created 0
+[2021-11-14 12:50:59.467] [board_logger] [error] serial port is empty
+[2021-11-14 12:54:41.428] [board_logger] [info] incoming json: {"file":"file:\/\/Cyton_data.csv","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"0","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 12:54:41.429] [board_logger] [trace] Board object created 0
+[2021-11-14 12:54:41.429] [board_logger] [error] serial port is empty
+[2021-11-14 12:54:59.696] [board_logger] [info] incoming json: {"file":"file:\/\/Cyton_data.csv:r","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"0","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 12:54:59.696] [board_logger] [trace] Board object created 0
+[2021-11-14 12:54:59.696] [board_logger] [error] serial port is empty
+[2021-11-14 20:32:16.900] [board_logger] [info] incoming json: {"file":"file:\/\/brainflow_data.csv:w","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"0","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 20:32:16.900] [board_logger] [trace] Board object created 0
+[2021-11-14 20:32:16.900] [board_logger] [error] serial port is empty
+[2021-11-14 20:33:48.995] [board_logger] [info] incoming json: {"file":"file:\/\/brainflow_data.csv:r","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"0","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 20:33:48.995] [board_logger] [trace] Board object created 0
+[2021-11-14 20:33:48.995] [board_logger] [error] serial port is empty
+[2021-11-14 20:34:10.177] [board_logger] [info] incoming json: {"file":"file:\/\/brainflow_data.csv:r","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"0","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 20:34:10.177] [board_logger] [trace] Board object created 0
+[2021-11-14 20:34:10.177] [board_logger] [error] serial port is empty
+[2021-11-14 22:14:23.033] [board_logger] [info] incoming json: {"file":"file:\/\/brainflow_data.csv:r","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"0","serial_number":"","serial_port":"","timeout":0}
+[2021-11-14 22:14:23.040] [board_logger] [trace] Board object created -3
+[2021-11-14 22:14:23.040] [board_logger] [error] invalid file path

@@ -9,6 +9,7 @@ public static class staticPorts
    public static string selected_port;
    public static int boardIdSelected;
    public static bool synthetic = false;
+   public static bool playback = false;
    public static bool connect = false;
    public static bool statusON = false;
    

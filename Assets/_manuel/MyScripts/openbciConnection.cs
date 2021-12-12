@@ -21,20 +21,37 @@ public class openbciConnection : MonoBehaviour
     {
         try
         {
+            //BoardShim.set_log_file("brainflow_log.txt");
             BoardShim.set_log_file("brainflow_log.txt");
+
             BoardShim.enable_dev_board_logger();
 
             BrainFlowInputParams input_params = new BrainFlowInputParams();
+            //int board_id = parse_args (args, input_params);
             int board_id = staticPorts.boardIdSelected;
             // input_params.serial_port = "COM3";
-            if(staticPorts.synthetic != true){
-                input_params.serial_port = staticPorts.selected_port;
-            }
 
-            board_shim = new BoardShim(board_id, input_params);
-           
+
+            if(staticPorts.synthetic != true){
+                if(staticPorts.playback != true){
+                    input_params.serial_port = staticPorts.selected_port;
+                }else{
+                    print("PLAYBACK SELECTED");
+                    input_params.other_info = board_id.ToString();
+                    //input_params.file = "file://Cyton_data.csv:r";
+                    input_params.file = "file://brainflow_data.csv:r";
+                }
+            }
+            board_shim = new BoardShim((int)BoardIds.PLAYBACK_FILE_BOARD, input_params);
+            
             board_shim.prepare_session();
-            board_shim.start_stream(450000, "file://brainflow_data.csv:w");
+
+
+            if(staticPorts.synthetic){
+                board_shim.start_stream(450000, "file://brainflow_data.csv:w");
+            }            
+            
+            
             sampling_rate = BoardShim.get_sampling_rate(board_id);
             print("Sampling rate:"+sampling_rate);
             staticPorts.sampling_rate = BoardShim.get_sampling_rate(board_id);
@@ -133,8 +150,8 @@ public class openbciConnection : MonoBehaviour
             }
             //staticPorts.connect = false;
             staticPorts.statusON = false;
-            //connect_btn.SetActive(true);
-            //disconnect_btn.SetActive(false);
+            connect_btn.SetActive(true);
+            disconnect_btn.SetActive(false);
             Debug.Log("Brainflow streaming was stopped");
         }
     }
