@@ -21,6 +21,7 @@ public class openbciConnection : MonoBehaviour
     {
         try
         {
+            
             BoardShim.set_log_file("brainflow_log.txt");
             BoardShim.enable_dev_board_logger();
 
@@ -32,7 +33,10 @@ public class openbciConnection : MonoBehaviour
             }
 
             board_shim = new BoardShim(board_id, input_params);
-           
+
+            
+
+
             board_shim.prepare_session();
             board_shim.start_stream(450000, "file://brainflow_data.csv:w");
             sampling_rate = BoardShim.get_sampling_rate(board_id);
@@ -46,6 +50,12 @@ public class openbciConnection : MonoBehaviour
 
             staticPorts.eeg_channels =  BoardShim.get_eeg_channels (board_id);
 
+
+            BoardDescr board_descr = BoardShim.get_board_descr<BoardDescr>(board_id); 
+            staticPorts.board_descr = board_descr; //This object will be used in the SignalProcessing script
+
+
+            
             //DontDestroyOnLoad(connect_btn);
             //DontDestroyOnLoad(disconnect_btn);
             //SetConnectButton();
@@ -62,10 +72,14 @@ public class openbciConnection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Why this toggle?
+        
+        
         if(staticPorts.connect == true){
             startBoard();
             staticPorts.connect = false;
         }
+
         //status = ON / OFF
 
         if(staticPorts.statusON == true){

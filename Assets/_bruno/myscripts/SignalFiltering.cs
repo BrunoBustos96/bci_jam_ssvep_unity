@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 using System;
 using TMPro;
@@ -22,23 +23,42 @@ using brainflow.math;
 
         //public GameObject textObject;
 
-        public TextMeshProUGUI enSel;
+        //public TextMeshProUGUI enSel;
         void Awake(){
 
-            print("SignalFiltering Started");
+            
             DontDestroyOnLoad(this.gameObject);
             //enSel = textObject.GetComponent<TextMeshProUGUI> ();
         }
 
         void Update ()
         {
-            //THIS FUNCTION WAS MAINLY TESTED WITH THE SYNTHETIC BOARD
-            int board_id = staticPorts.boardIdSelected;
-            //double[,] unprocessed_data = openbciConnection.data;
-//            Debug.Log("Num elements SF unprocessed data: " + unprocessed_data.GetLength(1));
-            int[] eeg_channels = staticPorts.eeg_channels;
             
+            if (staticPorts.statusON == true){
+                //THIS FUNCTION WAS MAINLY TESTED WITH THE SYNTHETIC BOARD
+                print("SignalFiltering Started");
+                int board_id = staticPorts.boardIdSelected;
+                //double[,] unprocessed_data = openbciConnection.data;
+    //            Debug.Log("Num elements SF unprocessed data: " + unprocessed_data.GetLength(1));
+                int[] eeg_channels = staticPorts.eeg_channels;
+                
+                BoardDescr board_descr = staticPorts.board_descr;
+                int sampling_rate = board_descr.sampling_rate;
+                int nfft = DataFilter.get_nearest_power_of_two(sampling_rate);
+                // use second channel of synthetic board to see 'alpha'
+                int channel = eeg_channels[1];
             
+                double[] detrend = DataFilter.detrend(unprocessed_data.GetRow(channel), (int)DetrendOperations.LINEAR);
+                Tuple<double[], double[]> psd = DataFilter.get_psd_welch (detrend, nfft, nfft / 2, sampling_rate, (int)WindowFunctions.HANNING);
+                double band_power_alpha = DataFilter.get_band_power (psd, 7.0, 13.0);
+                double band_power_beta = DataFilter.get_band_power (psd, 14.0, 30.0);
+                Console.WriteLine ("Alpha/Beta Ratio:" + (band_power_alpha/ band_power_beta));
+            }
+
+
+            
+
+            /*
             if (unprocessed_data.GetLength(1) % (staticPorts.sampling_rate*2) == 0){
                 //print("Entering the segmentation loop");
                 //print((unprocessed_data.GetRow (eeg_channels[0]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0));
@@ -95,7 +115,7 @@ using brainflow.math;
 
                 unprocessed_data = empty_data;
             }
-            
+            */
             
             
         

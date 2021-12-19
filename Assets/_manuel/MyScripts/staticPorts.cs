@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using brainflow;
+using brainflow.math;
+
 public static class staticPorts 
 {
    
@@ -21,4 +24,7 @@ public static class staticPorts
    public static int scorePlyr1 = 0;
    public static int scorePlyr2 = 0;
    //public static int enemy_selected;
+
+
+   public static BoardDescr board_descr;
 }
