@@ -6,34 +6,34 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
-      value: 22424703114646640f1c192c1f6c520905141d24293b69031e1f3803c5e1393dc0f222fde8342c722c0ce6281d
-      flags: 0
-    RecentlyUsedScenePath-1:
       value: 22424703114646640f1c192c1f6c520905141d24293b69031e1f3803c5e1393dacf238e0f323
       flags: 0
-    RecentlyUsedScenePath-2:
+    RecentlyUsedScenePath-1:
       value: 22424703114646640f1c192c1f6c520905141d24293b69031e1f3803cfe53a2dacf238e0f323
       flags: 0
-    RecentlyUsedScenePath-3:
-      value: 2242470311464664000f0237152f103d0f241b2f222d357f212c0b36eedf646bacf238e0f323
-      flags: 0
-    RecentlyUsedScenePath-4:
+    RecentlyUsedScenePath-2:
       value: 2242470311464664000f0237152f103d0f241b2f222d357f212c0b36eedf646aacf238e0f323
       flags: 0
-    RecentlyUsedScenePath-5:
+    RecentlyUsedScenePath-3:
       value: 22424703114646640f1c192c1f6c6c232032280e292a33371926123facf53a31f6fe
       flags: 0
-    RecentlyUsedScenePath-6:
+    RecentlyUsedScenePath-4:
       value: 2242470311464664000f0237152f103d0f241b2f222d357f2f280e36ddec312ee7eb09fae43f31397717e1351027
       flags: 0
-    RecentlyUsedScenePath-7:
+    RecentlyUsedScenePath-5:
       value: 22424703114646640f1c192c1f6c520905141d24293b69031e1f3803c6e5362de5d339e6eb742a323016f6
       flags: 0
-    RecentlyUsedScenePath-8:
+    RecentlyUsedScenePath-6:
       value: 2242470311464664000f0237152f103d0f241b2f222d357f203c1127ebf03839fbe224d6eb3f2939354cfa320d2a18
       flags: 0
-    RecentlyUsedScenePath-9:
+    RecentlyUsedScenePath-7:
       value: 2242470311464664000f0237152f103d0f241b2f222d357f202c1326dde1272ce7f539e0e3297129370bfb25
+      flags: 0
+    RecentlyUsedScenePath-8:
+      value: 2242470311464664000f0237152f103d0f241b2f222d357f212c0b36eedf646bacf238e0f323
+      flags: 0
+    RecentlyUsedScenePath-9:
+      value: 22424703114646640f1c192c1f6c520905141d24293b69243f28143debee330be1e238eca92f31352d1b
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
