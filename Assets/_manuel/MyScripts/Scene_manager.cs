@@ -12,6 +12,8 @@ public class Scene_manager : MonoBehaviour
     public GameObject boardMenu;
     public GameObject connectButton;
     public GameObject disconnectButton;
+
+
     public void StartGame(){
         SceneManager.LoadScene("base_level_scene");
     }
@@ -20,6 +22,9 @@ public class Scene_manager : MonoBehaviour
     }
     public void MultiplayerGame(){
         SceneManager.LoadScene("multiplayer_level");
+    }
+    public void TrainingScene(){
+        SceneManager.LoadScene("trainingScene");
     }
     public void QuitGame(){
         Application.Quit();

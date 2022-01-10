@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_bruno/myscenes/SSVEPDebugTool.unity
     guid: 0c7035ebc664a4b42be821c156f50894
+  - enabled: 1
+    path: Assets/_bruno/myscenes/trainingScene.unity
+    guid: 9a780c7c2d573394585a3f75f32a0f97
   m_configObjects: {}
