@@ -15,6 +15,8 @@ public class openbciConnection : MonoBehaviour
     
     public GameObject disconnect_btn;
 
+    //poner referencias al subject y session
+
     //public static double[,] data;
     // Start is called before the first frame update
     void startBoard()
