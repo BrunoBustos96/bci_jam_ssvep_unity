@@ -47,13 +47,13 @@ public class gameController : MonoBehaviour
 
                 text.gameObject.SetActive(true);
                 yield return new WaitForSeconds(3f);
-                SceneManager.LoadScene("menu_asteroids");
+                BackToMenu();
              }
 
         text.text = "You Lose!";
         text.gameObject.SetActive(true);
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("menu_asteroids");
+        BackToMenu();
 
     }
 
@@ -66,7 +66,7 @@ public class gameController : MonoBehaviour
             // yield return new WaitForSeconds(3f);
             if(currentLvl == 3 || currentLvl ==4)
             {
-                 SceneManager.LoadScene("menu_asteroids");
+                BackToMenu();
             }
             else{
             
@@ -76,6 +76,10 @@ public class gameController : MonoBehaviour
 
     }
 
+    void BackToMenu(){
+        staticPorts.gameStarted = false;
+        SceneManager.LoadScene("barracuda_menu");
+    }
     
     //GameOver - You Lose Screen, wait for secs, show main menu
     //GameWin - You Win!, wait for secs, Level {} Cleared!, next level

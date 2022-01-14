@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 using brainflow;
 using brainflow.math;
@@ -16,8 +18,17 @@ public class openbciConnection : MonoBehaviour
     public GameObject disconnect_btn;
 
     //poner referencias al subject y session
+    public TMP_InputField subject;
+    private string str_subject;
+    public TMP_InputField session;
+    private string str_session;
+    public TMP_InputField frequency;
+    private string str_frequency;
 
-    //public static double[,] data;
+    private string file_name;
+    public static double[,] data;
+
+    private bool markerStop = false; //This variable will prevent the marker to be inserted all the time (we only need one when the scene begins and another one one the scene ends)
     // Start is called before the first frame update
     void startBoard()
     {
@@ -36,11 +47,17 @@ public class openbciConnection : MonoBehaviour
 
             board_shim = new BoardShim(board_id, input_params);
 
-            
+            // Obtaining the text from the boxes
+            str_subject = subject.text;
+            str_session = session.text;
+            str_frequency = frequency.text;
+            staticPorts.freq = float.Parse(str_frequency);
 
-
+            file_name = "file://Subject"+str_subject+"_Session"+str_session+"_"+str_frequency+"Hz.csv:w";
+            print(file_name);
             board_shim.prepare_session();
-            board_shim.start_stream(450000, "file://brainflow_data.csv:w");
+            board_shim.start_stream(450000, file_name);
+            //board_shim.insert_marker(1.0f);
             sampling_rate = BoardShim.get_sampling_rate(board_id);
             print("Sampling rate:"+sampling_rate);
             staticPorts.sampling_rate = BoardShim.get_sampling_rate(board_id);
@@ -94,6 +111,24 @@ public class openbciConnection : MonoBehaviour
             //double [,] data = board_shim.get_current_board_data(number_of_data_points);
 
             SignalFiltering.unprocessed_data = board_shim.get_current_board_data(number_of_data_points);
+
+            //Insert ONE marker when the game starts.
+            if (staticPorts.gameStarted){
+
+                if (markerStop == false){
+                    board_shim.insert_marker(staticPorts.freq);
+                    markerStop = true;
+                }
+                
+                
+            }
+
+            /*
+            else if(staticPorts.gameStarted == false){
+                board_shim.insert_marker(-2.0f);   
+            }
+            */            
+
             //SignalFiltering.unprocessed_data = board_shim.get_board_data();
             // check https://brainflow.readthedocs.io/en/stable/index.html for api ref and more code samples
             //print(data[31,1]);
@@ -136,7 +171,7 @@ public class openbciConnection : MonoBehaviour
         
         print("DESTROYING BOARD");
         
-
+        board_shim.insert_marker(-1.0f);
         if (board_shim != null)
         {
             try

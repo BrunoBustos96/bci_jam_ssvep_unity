@@ -16,6 +16,7 @@ public class Scene_manager : MonoBehaviour
 
     public void StartGame(){
         SceneManager.LoadScene("base_level_scene");
+        staticPorts.gameStarted = true;
     }
     public void DebugScene(){
         SceneManager.LoadScene("SSVEPDebugTool");
@@ -27,6 +28,7 @@ public class Scene_manager : MonoBehaviour
         SceneManager.LoadScene("trainingScene");
     }
     public void QuitGame(){
+        staticPorts.gameStarted = false;
         Application.Quit();
     }
 

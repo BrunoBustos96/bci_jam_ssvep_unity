@@ -226,6 +226,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
@@ -446,10 +447,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f166795c4e8c13a4a8de89e12f546477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player_num: 0
   angularSpeed: 250
   offsetBullet: 0.5
   bulletPrefab: {fileID: 7039734362221758217, guid: 8e7150d35313c024593d12dc874e4378, type: 3}
   explosion: {fileID: 5814714906454575830, guid: 7ff3b5c6289a7f044ac77717ce19279c, type: 3}
+  timeRemaining: 2
 --- !u!114 &342083585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6202,6 +6205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuGUI: {fileID: 1605682362}
+  signal_filtering: {fileID: 0}
 --- !u!1 &1506826350
 GameObject:
   m_ObjectHideFlags: 0

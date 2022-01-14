@@ -47,6 +47,6 @@ public class pauseMenu : MonoBehaviour
     public void BackToMainMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("menu_asteroids");
+        SceneManager.LoadScene("barracuda_menu");
     }
 }
