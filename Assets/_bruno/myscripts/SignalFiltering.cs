@@ -44,6 +44,7 @@ using brainflow.math;
                 
                 BoardDescr board_descr = staticPorts.board_descr;
                 int sampling_rate = board_descr.sampling_rate;
+                /*
                 int nfft = DataFilter.get_nearest_power_of_two(sampling_rate);
                 // use second channel of synthetic board to see 'alpha'
                 int channel = eeg_channels[1];
@@ -53,13 +54,9 @@ using brainflow.math;
                 double band_power_alpha = DataFilter.get_band_power (psd, 7.0, 13.0);
                 double band_power_beta = DataFilter.get_band_power (psd, 14.0, 30.0);
                 Console.WriteLine ("Alpha/Beta Ratio:" + (band_power_alpha/ band_power_beta));
-            }
+                */
 
-
-            
-
-            /*
-            if (unprocessed_data.GetLength(1) % (staticPorts.sampling_rate*2) == 0){
+                if (unprocessed_data.GetLength(1) % (staticPorts.sampling_rate*2) == 0){
                 //print("Entering the segmentation loop");
                 //print((unprocessed_data.GetRow (eeg_channels[0]), staticPorts.sampling_rate, 15.0, 5.0, 2, (int)FilterTypes.BUTTERWORTH, 0.0));
                 print("ENTERED THE IF");
@@ -80,7 +77,7 @@ using brainflow.math;
                     sum19 = sum19 + filtered19[j];
                     sum25 = sum25 + filtered25[j];
                 }
-                print(sum5/filtered5.Length);
+                //print(sum5/filtered5.Length);
                 
                 //ShowValueScript.enemyTextUpdate(7);
 
@@ -88,35 +85,37 @@ using brainflow.math;
                 if ((sum25/filtered25.Length) > staticPorts.ssvep_threshold){
                     print("ENEMY 25");
                     enemySelected = Convert.ToString(4);
-                    enSel.text = Convert.ToString(4);
+                    //enSel.text = Convert.ToString(4);
                 }
                 else if ((sum12/filtered19.Length) > staticPorts.ssvep_threshold){
                     print("ENEMY 19");
                     enemySelected = Convert.ToString(3);
-                    enSel.text  = Convert.ToString(3);
+                    //enSel.text  = Convert.ToString(3);
                 }
                 else if ((sum12/filtered12.Length) > staticPorts.ssvep_threshold){
                     print(sum12/filtered12.Length);
                     print("ENEMY 12");
                     enemySelected = Convert.ToString(2);
-                    enSel.text  = Convert.ToString(2);
+                    //enSel.text  = Convert.ToString(2);
                 }
                 else if ((sum5/filtered5.Length) > staticPorts.ssvep_threshold){
                     print(sum5/filtered5.Length);
                     print("ENEMY 5");
                     enemySelected = Convert.ToString(1);
-                    enSel.text  = Convert.ToString(1);
+                    //enSel.text  = Convert.ToString(1);
                 }
                 else{
                     enemySelected = Convert.ToString(-1);
-                    enSel.text  = Convert.ToString(-1);
+                    //enSel.text  = Convert.ToString(-1);
                 }
-                //print("AVERAGE FILTERED "+sum /filtered.Length );
+
+                double sum = sum5+sum12+sum19+sum25;
+                print("AVERAGE FILTERED "+sum /filtered5.Length );
 
                 unprocessed_data = empty_data;
             }
-            */
-            
+
+            }           
             
         
         }
