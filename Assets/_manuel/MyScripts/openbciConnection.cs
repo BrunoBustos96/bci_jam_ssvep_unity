@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -53,8 +54,23 @@ public class openbciConnection : MonoBehaviour
             str_frequency = frequency.text;
             staticPorts.freq = float.Parse(str_frequency);
 
-            file_name = "file://Subject"+str_subject+"_Session"+str_session+"_"+str_frequency+"Hz.csv:w";
-            print(file_name);
+            //CREATING A NEW DIRECTORY
+            String path = Application.dataPath+"\\Recordings\\Subject"+str_subject+"\\";
+            
+            
+            if (!Directory.Exists(path)){
+                var folder = Directory.CreateDirectory(path);
+                file_name = "file://"+folder.FullName+str_session+"_"+str_frequency+"Hz.csv:w";
+            }else{
+                print("ALREADY CREATED");
+                file_name = "file://"+path+str_session+"_"+str_frequency+"Hz.csv:w";
+            }
+            
+            
+            //file_name = "file://Subject"+str_subject+"_Session"+str_session+"_"+str_frequency+"Hz.csv:w";
+            
+
+            print("FULL PATH: "+file_name);
             board_shim.prepare_session();
             board_shim.start_stream(450000, file_name);
             //board_shim.insert_marker(1.0f);
