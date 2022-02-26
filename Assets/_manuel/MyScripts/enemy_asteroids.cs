@@ -9,7 +9,7 @@ public class enemy_asteroids : MonoBehaviour
     public GameObject explosion;
     public float Speed = 0.25f;
 
-    public int healt;
+    public int health;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,9 +43,9 @@ public class enemy_asteroids : MonoBehaviour
      private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet"))
         {
-            healt--;
+            health--;
             Destroy(other.gameObject); //destroy bullet
-            if (healt==0){
+            if (health==0){
             Kill(); //Destroy enemy and bullet, instantiate explosion
             }
         }

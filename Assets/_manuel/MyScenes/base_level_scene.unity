@@ -271,7 +271,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 53
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -416,7 +416,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342083579}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 559229342}
   - component: {fileID: 559229341}
   m_Layer: 0
-  m_Name: enemy (3)
+  m_Name: enemy19Hz
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -736,7 +736,7 @@ MonoBehaviour:
   player: {fileID: 342083579}
   explosion: {fileID: 5814714906454575830, guid: 7ff3b5c6289a7f044ac77717ce19279c, type: 3}
   Speed: 0.25
-  healt: 1
+  health: 1
 --- !u!212 &559229346
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -919,7 +919,7 @@ GameObject:
   - component: {fileID: 826244631}
   - component: {fileID: 826244630}
   m_Layer: 0
-  m_Name: enemy (1)
+  m_Name: enemy12Hz
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -987,7 +987,7 @@ MonoBehaviour:
   player: {fileID: 342083579}
   explosion: {fileID: 5814714906454575830, guid: 7ff3b5c6289a7f044ac77717ce19279c, type: 3}
   Speed: 0.25
-  healt: 1
+  health: 1
 --- !u!212 &826244633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6222,7 +6222,7 @@ GameObject:
   - component: {fileID: 1506826356}
   - component: {fileID: 1506826357}
   m_Layer: 0
-  m_Name: enemy
+  m_Name: enemy5Hz
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6242,8 +6242,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 342083579}
   explosion: {fileID: 5814714906454575830, guid: 7ff3b5c6289a7f044ac77717ce19279c, type: 3}
-  Speed: 1
-  healt: 1
+  Speed: 0.25
+  health: 1
 --- !u!212 &1506826352
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6303,7 +6303,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506826350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.29, y: 7.52, z: -0.1}
+  m_LocalPosition: {x: 9.21, y: 6.35, z: -0.1}
   m_LocalScale: {x: 0.09929, y: 0.09929, z: 0.09929}
   m_Children:
   - {fileID: 60354097}
