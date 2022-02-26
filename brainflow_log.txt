@@ -8506,3 +8506,63 @@
 [2022-01-18 18:17:17.923] [board_logger] [trace] File Streamer, file: Subject001_Session001_5Hz.csv, mods: w
 [2022-01-18 18:18:34.858] [board_logger] [trace] release session
 [2022-01-18 18:18:34.858] [board_logger] [trace] stop stream
+[2022-02-25 22:03:48.508] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2022-02-25 22:03:48.508] [board_logger] [trace] Board object created -1
+[2022-02-25 22:03:48.508] [board_logger] [trace] prepare session
+[2022-02-25 22:03:48.514] [board_logger] [error] format is streamer_type://streamer_dest:streamer_args
+[2022-02-25 22:03:58.478] [board_logger] [trace] release session
+[2022-02-25 22:03:58.478] [board_logger] [trace] stop stream
+[2022-02-25 22:05:10.986] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2022-02-25 22:05:10.986] [board_logger] [trace] Board object created -1
+[2022-02-25 22:05:10.986] [board_logger] [trace] prepare session
+[2022-02-25 22:05:10.992] [board_logger] [error] format is streamer_type://streamer_dest:streamer_args
+[2022-02-25 22:05:16.156] [board_logger] [trace] release session
+[2022-02-25 22:05:16.156] [board_logger] [trace] stop stream
+[2022-02-25 22:06:39.818] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2022-02-25 22:06:39.818] [board_logger] [trace] Board object created -1
+[2022-02-25 22:06:39.818] [board_logger] [trace] prepare session
+[2022-02-25 22:06:39.824] [board_logger] [trace] File Streamer, file: 001_5Hz.csv, mods: w
+[2022-02-25 22:06:46.475] [board_logger] [trace] release session
+[2022-02-25 22:06:46.475] [board_logger] [trace] stop stream
+[2022-02-25 22:13:06.561] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2022-02-25 22:13:06.561] [board_logger] [trace] Board object created -1
+[2022-02-25 22:13:06.561] [board_logger] [trace] prepare session
+[2022-02-25 22:13:06.567] [board_logger] [trace] File Streamer, file: 010_8Hz.csv, mods: w
+[2022-02-25 22:13:26.138] [board_logger] [trace] release session
+[2022-02-25 22:13:26.138] [board_logger] [trace] stop stream
+[2022-02-25 22:14:08.209] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2022-02-25 22:14:08.209] [board_logger] [trace] Board object created -1
+[2022-02-25 22:14:08.209] [board_logger] [trace] prepare session
+[2022-02-25 22:14:08.216] [board_logger] [trace] File Streamer, file: 010_8Hz.csv, mods: w
+[2022-02-25 22:14:12.875] [board_logger] [trace] release session
+[2022-02-25 22:14:12.875] [board_logger] [trace] stop stream
+[2022-02-25 22:15:24.092] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2022-02-25 22:15:24.092] [board_logger] [trace] Board object created -1
+[2022-02-25 22:15:24.092] [board_logger] [trace] prepare session
+[2022-02-25 22:15:24.098] [board_logger] [trace] File Streamer, file: 010_8Hz.csv, mods: w
+[2022-02-25 22:15:31.356] [board_logger] [trace] release session
+[2022-02-25 22:15:31.356] [board_logger] [trace] stop stream
+[2022-02-25 22:16:04.852] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2022-02-25 22:16:04.853] [board_logger] [trace] Board object created -1
+[2022-02-25 22:16:04.853] [board_logger] [trace] prepare session
+[2022-02-25 22:16:04.859] [board_logger] [trace] File Streamer, file: 001_5Hz.csv, mods: w
+[2022-02-25 22:16:17.694] [board_logger] [trace] release session
+[2022-02-25 22:16:17.695] [board_logger] [trace] stop stream
+[2022-02-25 22:16:56.776] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2022-02-25 22:16:56.776] [board_logger] [trace] Board object created -1
+[2022-02-25 22:16:56.776] [board_logger] [trace] prepare session
+[2022-02-25 22:16:56.781] [board_logger] [trace] File Streamer, file: C:\Users\samae\Documents\GitHub\bci_jam_ssvep_unity\Assets\Subject001\001_5Hz.csv, mods: w
+[2022-02-25 22:17:02.362] [board_logger] [trace] release session
+[2022-02-25 22:17:02.362] [board_logger] [trace] stop stream
+[2022-02-25 22:23:50.093] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2022-02-25 22:23:50.093] [board_logger] [trace] Board object created -1
+[2022-02-25 22:23:50.093] [board_logger] [trace] prepare session
+[2022-02-25 22:23:50.103] [board_logger] [trace] File Streamer, file: C:\Users\samae\Documents\GitHub\bci_jam_ssvep_unity\Assets\Recordings\Subject001\001_5Hz.csv, mods: w
+[2022-02-25 22:23:54.046] [board_logger] [trace] release session
+[2022-02-25 22:23:54.046] [board_logger] [trace] stop stream
+[2022-02-25 22:24:39.545] [board_logger] [info] incoming json: {"file":"","ip_address":"","ip_port":0,"ip_protocol":0,"mac_address":"","other_info":"","serial_number":"","serial_port":"","timeout":0}
+[2022-02-25 22:24:39.546] [board_logger] [trace] Board object created -1
+[2022-02-25 22:24:39.546] [board_logger] [trace] prepare session
+[2022-02-25 22:24:39.552] [board_logger] [trace] File Streamer, file: C:/Users/samae/Documents/GitHub/bci_jam_ssvep_unity/Assets\Recordings\Subject001\001_5Hz.csv, mods: w
+[2022-02-25 22:24:43.075] [board_logger] [trace] release session
+[2022-02-25 22:24:43.075] [board_logger] [trace] stop stream
