@@ -71,6 +71,7 @@ public class openbciConnection : MonoBehaviour
             
 
             print("FULL PATH: "+file_name);
+        
             board_shim.prepare_session();
             board_shim.start_stream(450000, file_name);
             //board_shim.insert_marker(1.0f);
@@ -187,7 +188,7 @@ public class openbciConnection : MonoBehaviour
         
         print("DESTROYING BOARD");
         
-        board_shim.insert_marker(-1.0f);
+        board_shim.insert_marker(1.0f);
         if (board_shim != null)
         {
             try
